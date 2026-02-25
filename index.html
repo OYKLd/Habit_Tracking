@@ -1,13 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habit_Tracking</title>
+    <title>Suivi d'Habitudes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Suivi d'Habitudes</h1>
+            <p class="subtitle">Construisez de meilleures habitudes, un jour à la fois</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalHabits">0</div>
+                        <div class="stat-label">Habitudes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="todayCompleted">0</div>
+                        <div class="stat-label">Aujourd'hui</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="longestStreak">0</div>
+                        <div class="stat-label">Meilleure série</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="add-habit-section">
+                <form id="habitForm" class="habit-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="habitName" 
+                            placeholder="Nouvelle habitude (ex: Sport, Lecture, Eau)" 
+                            class="habit-input"
+                            required
+                        >
+                        <button type="submit" class="add-btn">
+                            <span>+</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="habits-section">
+                <div id="habitsContainer" class="habits-grid">
+                </div>
+                
+                <div id="emptyState" class="empty-state">
+                    <h3>Aucune habitude</h3>
+                    <p>Ajoutez votre première habitude pour commencer à suivre votre progression</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
